@@ -1,0 +1,79 @@
+My Emacs Configuration File
+
+* Prelude
+   #+begin_src emacs-lisp
+     (setq prelude-guru nil)
+   #+end_src
+* Packages
+   #+begin_src emacs-lisp
+     (prelude-require-packages '(jabber
+                                 pretty-mode
+                                 twittering-mode))
+   #+end_src
+* Personal Information
+
+  #+begin_src emacs-lisp
+      (setq user-full-name "Michael Simpson")
+      (setq user-mail-address "mjs2600@gmail.com")
+      (setq auth-sources '("~/.authinfo.gpg"))
+  #+end_src
+
+* Social
+** RSS
+   #+begin_src emacs-lisp
+     (setq elfeed-feeds
+           '("http://feeds.boingboing.net/boingboing/iBag"
+             ;"http://www.stallman.org/rss/rss.xml"
+             "http://xkcd.com/rss.xml"
+             "http://feeds.feedburner.com/Lessig?format=xmlford.edu/lessig/blog/index.rdf"
+             "https://www.eff.org/rss/updates.xml"
+             "http://planet.emacsen.org/atom.xml"
+             "http://blog.fogus.me/tag/readevalprintlove/feed/"))
+   #+end_src
+
+** Jabber
+   IM settings for gmail
+   #+begin_src emacs-lisp
+     ;(require 'jabber)
+
+     (setq jabber-account-list
+           '(("mjs2600@gmail.com"
+              (:network-server . "talk.google.com")
+              (:connection-type . ssl))
+             ("mike.simpson@scimedsolutions.com"
+              (:network-server . "talk.google.com")
+              (:connection-type . ssl))))
+
+     (setq jabber-auto-reconnect nil)
+     (setq jabber-vcard-avatars-retrieve nil)
+     (setq jabber-mode-line-mode t)
+     (setq jabber-show-offline-contacts nil)
+   #+end_src
+
+** ERC
+
+** Twitter
+   #+begin_src emacs-lisp
+     ;(require 'twittering-mode)
+   #+end_src
+* Style
+  This section is for things like font size and color theme settings.
+  #+begin_src emacs-lisp
+    (load-theme 'cyberpunk t)
+    ;;(load-theme 'zenburn t)
+    (global-auto-revert-mode t)
+    (require 'pretty-mode)
+    (global-pretty-mode t)
+    (set-face-attribute 'default nil :height 140)
+
+    (setq tab-width 2)
+  #+end_src
+* eShell
+  #+begin_src emacs-lisp
+
+    (setq eshell-cmpl-ignore-case t)
+    (defadvice ansi-term (after advise-ansi-term-coding-system)
+      (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
+    (ad-activate 'ansi-term)
+
+  #+end_src
