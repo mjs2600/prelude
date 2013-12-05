@@ -6,7 +6,8 @@ My Emacs Configuration File
    #+end_src
 * Packages
    #+begin_src emacs-lisp
-     (prelude-require-packages '(jabber
+     (prelude-require-packages '(cyberpunk-theme
+                                 jabber
                                  pretty-mode
                                  twittering-mode
                                  auto-complete
