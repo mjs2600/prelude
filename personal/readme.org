@@ -8,7 +8,9 @@ My Emacs Configuration File
    #+begin_src emacs-lisp
      (prelude-require-packages '(jabber
                                  pretty-mode
-                                 twittering-mode))
+                                 twittering-mode
+                                 auto-complete
+                                 rvm))
    #+end_src
 * Personal Information
 
@@ -77,3 +79,4 @@ My Emacs Configuration File
     (ad-activate 'ansi-term)
 
   #+end_src
+* Auto-Complete

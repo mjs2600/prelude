@@ -6,7 +6,7 @@
 ;(add-to-list 'load-path "~/elisp/config/")
 
 (require 'org)
-(org-babel-load-file "~/.emacs.d/readme.org")
+(org-babel-load-file "~/.emacs.d/personal/readme.org")
 
 ;(require 'rss-config)
 ;(require 'social-config)
