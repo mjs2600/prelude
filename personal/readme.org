@@ -83,4 +83,18 @@ My Emacs Configuration File
     (ad-activate 'ansi-term)
 
   #+end_src
+* Programming
+** Documentation
+
+   #+begin_src emacs-lisp
+     (prelude-require-packages '(dash-at-point
+                                 zeal-at-point)
+
+     (defun doc-at-point ()
+       "An OS agnostic external documentation lookup function."
+       (interactive)
+       (if (eq system-type 'darwin)
+           (dash-at-point)
+         (zeal-at-point)))
+   #+end_src
 * Auto-Complete
