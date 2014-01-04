@@ -88,6 +88,9 @@ My Emacs Configuration File
 * Programming
 ** Documentation
 
+   This function will use the appropriate external documentation tool
+   regardless of OS.
+
    #+begin_src emacs-lisp
      (prelude-require-packages '(dash-at-point
                                  zeal-at-point)
