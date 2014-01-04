@@ -16,8 +16,26 @@ My Emacs Configuration File
                                  pretty-mode
                                  twittering-mode
                                  auto-complete
-                                 rvm))
+                                 rvm
+                                 ido-ubiquitous))
    #+end_src
+
+* Utils
+
+** Smex
+
+   Smex allows you to use ido-mode with M-x.
+
+   #+begin_src emacs-lisp
+     (prelude-require-package 'smex)
+
+     (smex-initialize)
+
+     (global-set-key (kbd "M-x") 'smex)
+     (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+   #+end_src
+
+
 * Personal Information
 
   #+begin_src emacs-lisp
