@@ -19,9 +19,11 @@ My Emacs Configuration File
 * Personal Information
 
   #+begin_src emacs-lisp
-      (setq user-full-name "Michael Simpson")
-      (setq user-mail-address "mjs2600@gmail.com")
-      (setq auth-sources '("~/.authinfo.gpg"))
+    (setq user-full-name "Michael Simpson")
+    (setq user-mail-address "mjs2600@gmail.com")
+    (setq auth-sources '("~/.authinfo.gpg"))
+    (setq password-file "~/.passwords.gpg")
+    (and (file-exists-p password-file) (load-file password-file))
   #+end_src
 
 * Social
