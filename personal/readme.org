@@ -16,8 +16,7 @@ My Emacs Configuration File
                                  pretty-mode
                                  twittering-mode
                                  auto-complete
-                                 rvm
-                                 ido-ubiquitous))
+                                 rvm))
    #+end_src
 
 * Utils
