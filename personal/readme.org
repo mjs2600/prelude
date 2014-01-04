@@ -34,7 +34,6 @@ My Emacs Configuration File
      (global-set-key (kbd "M-X") 'smex-major-mode-commands)
    #+end_src
 
-
 * Personal Information
 
   #+begin_src emacs-lisp
@@ -129,3 +128,21 @@ My Emacs Configuration File
            (dash-at-point)
          (zeal-at-point)))
    #+end_src
+** Lisp
+  #+begin_src emacs-lisp
+    (prelude-require-package 'rainbow-delimiters)
+    (defun general-lisp-mode-hooks ()
+      (rainbow-delimiters-mode-enable)
+      (smartparens-mode t))
+    (add-hook 'lisp-mode-hook 'general-lisp-mode-hooks)
+    (add-hook 'emacs-lisp-mode-hook 'general-lisp-mode-hooks)
+    (add-hook 'geiser-repl-mode-hook 'general-lisp-mode-hooks)
+    (add-hook 'scheme-mode-hook 'general-lisp-mode-hooks)
+    (add-hook 'ielm-mode-hook 'general-lisp-mode-hooks)
+
+  #+end_src
+
+*** Scheme
+  #+begin_src emacs-lisp
+    (prelude-require-package 'geiser)
+  #+end_src
