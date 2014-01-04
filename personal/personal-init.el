@@ -9,7 +9,7 @@
 
 (org-babel-load-file "~/.emacs.d/personal/readme.org")
 
-(let ((compiled-elisp "~/.emacs.d/readme.el"))
+(let ((compiled-elisp "~/.emacs.d/personal/readme.el"))
   (if (file-exists-p compiled-elisp)
       (delete-file compiled-elisp)))
 
