@@ -67,8 +67,7 @@ My Emacs Configuration File
 * Style
   This section is for things like font size and color theme settings.
   #+begin_src emacs-lisp
-    (load-theme 'cyberpunk t)
-    ;;(load-theme 'zenburn t)
+    ;;(load-theme 'cyberpunk t)
     (global-auto-revert-mode t)
     (require 'pretty-mode)
     (global-pretty-mode t)
