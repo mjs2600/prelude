@@ -7,6 +7,7 @@ My Emacs Configuration File
 
 * Packages
    #+begin_src emacs-lisp
+     (add-to-list 'load-path "~/.emacs.d/personal/lib/")
      (prelude-require-packages '(ac-nrepl
                                  auto-complete
                                  cyberpunk-theme
@@ -65,6 +66,14 @@ My Emacs Configuration File
    #+begin_src emacs-lisp
      ;(require 'twittering-mode)
    #+end_src
+
+* Media
+  #+begin_src emacs-lisp
+    (setq pianobar-username "xodis2600@gmail.com")
+    (load-library "pianobar")
+    (require 'pianobar)
+  #+end_src
+
 * Style
   This section is for things like font size and color theme settings.
   #+begin_src emacs-lisp
