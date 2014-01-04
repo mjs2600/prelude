@@ -1,6 +1,10 @@
+
 (setq prelude-guru nil)
 
-(prelude-require-packages '(cyberpunk-theme
+(prelude-require-packages '(ac-nrepl
+                            auto-complete
+                            cyberpunk-theme
+                            elfeed
                             jabber
                             pretty-mode
                             twittering-mode
