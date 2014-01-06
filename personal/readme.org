@@ -128,6 +128,12 @@ My Emacs Configuration File
            (dash-at-point)
          (zeal-at-point)))
    #+end_src
+** Ruby
+*** Rails
+  #+begin_src emacs-lisp
+    (prelude-require-package 'rinari)
+  #+end_src
+
 ** Lisp
   #+begin_src emacs-lisp
     (prelude-require-package 'rainbow-delimiters)
