@@ -1,7 +1,9 @@
 My Emacs Configuration File
 
 * Prelude
-
+   #+begin_src emacs-lisp
+     (setq prelude-clean-whitespace-on-save nil)
+   #+end_src
 * Packages
    #+begin_src emacs-lisp
      (add-to-list 'load-path "~/.emacs.d/personal/lib/")
