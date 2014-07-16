@@ -1,22 +1,14 @@
 My Emacs Configuration File
 
 * Prelude
-   #+begin_src emacs-lisp
-     (setq prelude-guru nil)
-   #+end_src
 
 * Packages
    #+begin_src emacs-lisp
      (add-to-list 'load-path "~/.emacs.d/personal/lib/")
-     (prelude-require-packages '(ac-nrepl
-                                 auto-complete
-                                 cyberpunk-theme
-                                 elfeed
+     (prelude-require-packages '(elfeed
                                  jabber
                                  pretty-mode
-                                 twittering-mode
-                                 auto-complete
-                                 rvm))
+                                 twittering-mode))
    #+end_src
 
 * Utils
@@ -93,11 +85,9 @@ My Emacs Configuration File
 * Style
   This section is for things like font size and color theme settings.
   #+begin_src emacs-lisp
-    ;;(load-theme 'cyberpunk t)
     (global-auto-revert-mode t)
     (require 'pretty-mode)
     (global-pretty-mode t)
-    (ido-mode t)
     (set-face-attribute 'default nil :height 140)
 
     (setq tab-width 2)
@@ -126,29 +116,29 @@ My Emacs Configuration File
        (interactive)
        (if (eq system-type 'darwin)
            (dash-at-point)
-         (zeal-at-point)))
+           (zeal-at-point)))
    #+end_src
 ** Ruby
 *** Rails
   #+begin_src emacs-lisp
-    (prelude-require-package 'rinari)
+    ;;(prelude-require-package 'rinari)
   #+end_src
 
 ** Lisp
   #+begin_src emacs-lisp
-    (prelude-require-package 'rainbow-delimiters)
-    (defun general-lisp-mode-hooks ()
-      (rainbow-delimiters-mode-enable)
-      (smartparens-mode t))
-    (add-hook 'lisp-mode-hook 'general-lisp-mode-hooks)
-    (add-hook 'emacs-lisp-mode-hook 'general-lisp-mode-hooks)
-    (add-hook 'geiser-repl-mode-hook 'general-lisp-mode-hooks)
-    (add-hook 'scheme-mode-hook 'general-lisp-mode-hooks)
-    (add-hook 'ielm-mode-hook 'general-lisp-mode-hooks)
+    ;(prelude-require-package 'rainbow-delimiters)
+    ;(defun general-lisp-mode-hooks ()
+    ;  (rainbow-delimiters-mode-enable)
+    ;  (smartparens-mode t))
+    ;(add-hook 'lisp-mode-hook 'general-lisp-mode-hooks)
+    ;(add-hook 'emacs-lisp-mode-hook 'general-lisp-mode-hooks)
+    ;(add-hook 'geiser-repl-mode-hook 'general-lisp-mode-hooks)
+    ;(add-hook 'scheme-mode-hook 'general-lisp-mode-hooks)
+    ;(add-hook 'ielm-mode-hook 'general-lisp-mode-hooks)
 
   #+end_src
 
 *** Scheme
   #+begin_src emacs-lisp
-    (prelude-require-package 'geiser)
+    ;(prelude-require-package 'geiser)
   #+end_src
