@@ -40,7 +40,7 @@ My Emacs Configuration File
    #+begin_src emacs-lisp
      (setq elfeed-feeds
            '("http://feeds.boingboing.net/boingboing/iBag"
-             ;"http://www.stallman.org/rss/rss.xml"
+             "http://fivethirtyeight.com/politics/feed/"
              "http://xkcd.com/rss.xml"
              "http://feeds.feedburner.com/Lessig?format=xmlford.edu/lessig/blog/index.rdf"
              "https://www.eff.org/rss/updates.xml"
