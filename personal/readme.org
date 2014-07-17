@@ -146,3 +146,9 @@ My Emacs Configuration File
   #+begin_src emacs-lisp
     ;(prelude-require-package 'geiser)
   #+end_src
+
+** Elixir
+
+   #+begin_src emacs-lisp
+     (prelude-require-packages '(elixir-mode))
+   #+end_src
