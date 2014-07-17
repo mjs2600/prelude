@@ -72,6 +72,11 @@ My Emacs Configuration File
 
 ** ERC
 
+   #+begin_src emacs-lisp
+     (setq erc-autojoin-channels-alist
+           '(("freenode.net" "#elixir-lang")))
+   #+end_src
+
 ** Twitter
    #+begin_src emacs-lisp
      ;(require 'twittering-mode)
