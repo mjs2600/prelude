@@ -150,5 +150,20 @@ My Emacs Configuration File
 ** Elixir
 
    #+begin_src emacs-lisp
-     (prelude-require-packages '(elixir-mode))
+     (prelude-require-packages '(elixir-mode
+                                 elixir-mix))
+   #+end_src
+
+* EVIl Mode
+
+   #+begin_src emacs-lisp
+     (prelude-require-packages '(evil-leader))
+     (global-evil-leader-mode)
+     (evil-leader/set-leader "<SPC>")
+
+     (evil-leader/set-key
+       "f" 'find-file
+       "b" 'switch-to-buffer
+       "k" 'kill-buffer)
+
    #+end_src
